@@ -104,37 +104,6 @@ body,
   }
 }
 
-@media (max-width: 768px) {
-  .topnavbar.responsive a {
-    font-size: 0.35rem;
-    padding: 6px 10px;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-
-.topnavbar.responsive form {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 5px;
-}
-
-.topnavbar.responsive form input[type="search"] {
-  flex: 1; /* prende tutto lo spazio disponibile */
-  min-width: 0; /* evita che superi i limiti */
-}
-
-.topnavbar.responsive form input[type="submit"] {
-  flex-shrink: 0;
-}
-
-.topnavbar {
-  box-sizing: border-box;
-}
-
-
 /* -- fine hambruger menu responsive per piccoli schermi --*/
 
 
@@ -142,7 +111,7 @@ body,
   width: 100%;
   display: flex;
   align-items: center;
- 
+  flex-wrap: wrap;
   gap: 15px;
   padding: 18px 30px;
   background: rgba(217, 217, 217, 0.85);
@@ -169,16 +138,6 @@ body,
   background-color: #355576e0;
   color: white;
 }
-
-@media (max-width: 768px) {
-  .topnavbar.responsive a {
-    font-size: 0.35rem;
-    padding: 6px 10px;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-}
-
 
 /* Posizionamento dropdown */
 
@@ -262,11 +221,9 @@ body,
 /* css per il form della ricerca nella topnavbar */
 
 .topnavbar form {
-  margin-left: auto;
-  max-width: 30rem;
-  box-sizing: border-box;
-  display: flex;
-  gap: 5px;
+ margin-left: auto;
+display: flex;
+gap: 5px;
 }
 
 .topnavbar input[type="search"] {
@@ -456,7 +413,7 @@ body,
 .header-catalogo {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding-top: 20px;
 }
 
@@ -471,11 +428,22 @@ body,
   z-index: 1;
 }
 
+.breadcrumbs-right-item {
+  width: 280px;
+  height: 55.4px;
+  padding: 15px 30px;
+  background: rgba(217, 217, 217, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
 .breadcrumbs {
   width: 100%;
   padding: 15px 30px;
-  background: none;
-  baclkdrop-fiter: blur(4px);
+  background: rgba(217, 217, 217, 0.85);
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   position: sticky;
@@ -503,24 +471,25 @@ body,
 
 .breadcrumbs li+li::before {
   content: "›"; 
-  color: #2f4f4f;
+  color: #888;
   padding: 0 6px;
   font-size: 0.9rem;
 }
 
 .breadcrumbs li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #2f4f4f;
   padding: 4px 8px;
   border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
 }
 
 .breadcrumbs li a:hover {
+  background-color: #355576e0;
   color: #fff;
-  text-decoration: none;
 }
 
 
@@ -540,93 +509,6 @@ body,
   align-items: stretch;
   gap: 20px;
 }
-
-.catalogo-wrapper.header-catalogo, .breadcrumbs, .breadcrumbs-right, .catalogo-layout, .pagination {
-  width: 100%;
-}
-
-/*esperimenti per piccoli schermi inizio */
-/* Stili generali */
-.header-catalogo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.breadcrumbs {
-  font-size: 1rem; /* Dimensione di base per breadcrumb */
-}
-
-/* Media query per schermi con larghezza massima di 768px */
-@media (max-width: 768px) {
-  .header-catalogo {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .breadcrumbs {
-    font-size: 0.8rem; /* Rimpicciolisci la dimensione del font per i breadcrumb */
-    margin-bottom: 10px; /* Distanza tra i breadcrumb e il titolo */
-  }
-
-  .titolo-catalogo h2 {
-    font-size: 1.5rem; /* Rimpicciolisci il titolo */
-  }
-
-  /* Facoltativo: Adattare la larghezza per sfruttare lo spazio disponibile */
-  .breadcrumbs, {
-    width: 100%; /* Fai in modo che occupino tutta la larghezza disponibile */
-  }
-}
-
-/* Stili generali */
-.header-catalogo {
-  display: flex;
-  justify-content: space-between; */
-  align-items: center;
-  width: 100%; /* Assicura che occupi tutta la larghezza */
-}
-
-.breadcrumbs {
-  text-align: left; 
-}
-
-.breadcrumbs ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.breadcrumbs li {
-  display: inline-block;
-  margin-left: 5px;
-}
-
-.breadcrumbs li a {
-  text-decoration: none;
-  color: #ffffffb1;
-}
-
-/* Media query per schermi più piccoli */
-@media (max-width: 768px) {
-  .header-catalogo {
-    margin-right: 10px; /* Riduci il margine sui dispositivi piccoli */
-  }
-
-  .titolo-catalogo {
-    font-size: 1.5rem; /* Riduci la dimensione del titolo sui dispositivi piccoli */
-  }
-
-  .breadcrumbs {
-    font-size: 0.8rem; /* Riduci la dimensione del testo per i breadcrumb */
-  }
-}
-
-
-
-
-/*esperimenti per piccoli schermi fine*/
-
 
 
 .visualizzazione-file {
@@ -910,14 +792,13 @@ body,
 /* style per pagine ITEM */
 
 .titolo-catalogo {
-  text-align: center;
-  min-height: 40px;
+  width: 370px;
+  min-height: 90px;
   background-color: #f7f7f7;
   border-left: 5px solid #d12e2e;
   border-right: 5px solid #d12e2e; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
-  max-width: auto;
 }
 
 #testo-titolo-catalogo {
