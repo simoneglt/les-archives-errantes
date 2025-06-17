@@ -1,0 +1,34 @@
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+  <dc:title>Acrobati e giocolieri intorno a un cerchio</dc:title>
+  <dc:creator rdf:resource="https://w3id.org/arco/resource/Agent/d390f650e656bcddec1ca77387c937c2">Sencig Pietro Antonio</dc:creator>
+  <dc:subject>Manifesto pubblicitario</dc:subject>
+  <dc:description>Affiches prodotte dalla ditta Passero Chiesa di Udine</dc:description>
+  <dc:publisher rdf:resource="https://w3id.org/arco/resource/CulturalInstituteOrSite/DBunicoCG132053">Museo nazionale Collezione Salce</dc:publisher>
+  <dc:contributor>Passero Chiesa (ditta, Udine)</dc:contributor>
+  <dc:date>ca 1920-ca 1925</dc:date> 
+  <dc:type>Image</dc:type>
+  <dc:format>Stampa su carta; tecnica: Cromolitografia</dc:format>
+  <dc:identifier>https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500666037</dc:identifier>
+  <dc:source>MODI, Codice catalogo nazionale: 0500666037</dc:source>
+  <dc:language>it</dc:language>
+  <dc:relation>Numero di inventario: 00270</dc:relation>
+  <dc:coverage>Via Carlo Alberto, 31, Treviso (TV)</dc:coverage>
+  <dc:rights>CC-BY 4.0</dc:rights>
+</metadata>
+
+
+<!--  esempio di utilizzo degli elementi DC con linguaggio RDF
+
+<rdf:Description rdf:about="w3id.org/arco/resource/HistoricOrArtisticProperty/0500666037">
+  <dc:title>Acrobati e giocolieri intorno a un cerchio</dc:title>
+  <dc:creator rdf:resource="https://w3id.org/arco/resource/Agent/d390f650e656bcddec1ca77387c937c2">Sencig Pietro Antonio</dc:creator>
+  <dc:date>ca 1920-ca 1925</dc:date> 
+</rdf:Description> 
+
+-->
+
+
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <!-- Descrizione della persona -->
+  <foaf:Person rdf:about="https://w3id.org/arco/resource/Agent/d390f650e656bcddec1ca77387c937c2">
+    <foaf:name>Sencig Pietro Antonio</foaf:name>
+    <foaf:birthDate>1875</foaf:birthDate>
+    <foaf:deathDate>1952</foaf:deathDate>
+    <foaf:nationality>
+      <rdf:Description rdf:about="http://www.wikidata.org/entity/Q1860">
+        <rdfs:label>Italia</rdfs:label>
+      </rdf:Description>
+    </foaf:nationality>
+    <foaf:made rdf:resource="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500665116"/>
+    <foaf:made rdf:resource="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500656995"/>
+    <foaf:made rdf:resource="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500666038"/>
+    <foaf:focus>Disegnatore</foaf:focus>
+  </foaf:Person>
+
+</rdf:RDF>

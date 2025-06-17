@@ -1,0 +1,64 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/     22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+         xml:base="http://lesarchiveserrantes.org"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+  <!-- Oggetto: il manifesto -->
+  <crm:E22_Man-Made_Object rdf:about="http://w3id.org/arco/resource/HistoricOrArtisticProperty/0500666037">
+    <crm:P102_has_title xml:lang="it">Acrobati e giocolieri intorno a un cerchio</crm:P102_has_title>
+    <crm:P50_has_current_keeper rdf:resource="https://w3id.org/arco/resource/CulturalInstituteOrSite/DBunicoCG132053" />
+    <crm:P108i_was_produced_by rdf:resource="#production_event" />
+    <crm:P45_consists_of>Carta</crm:P45_consists_of>
+    <crm:P2_has_type>Manifesto pubblicitario</crm:P2_has_type>
+    <crm:P3_has_note>Affiches prodotte dalla ditta Passero Chiesa di Udine</crm:P3_has_note>
+    <crm:P48_has_preferred_identifier>0500666037</crm:P48_has_preferred_identifier>
+    <crm:P1_is_identified_by>
+      <crm:E42_Identifier>
+        <crm:P2_has_type>Numero di inventario</crm:P2_has_type>
+        <crm:P190_has_symbolic_content>00270</crm:P190_has_symbolic_content>
+      </crm:E42_Identifier>
+    </crm:P1_is_identified_by>
+    <crm:P129i_is_subject_of>
+      <crm:E73_Information_Object>
+        <crm:P190_has_symbolic_content>https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500666037</crm:P190_has_symbolic_content>
+      </crm:E73_Information_Object>
+    </crm:P129i_is_subject_of>
+  </crm:E22_Man-Made_Object>
+
+  <!-- Evento di produzione -->
+  <crm:E12_Production rdf:about="#production_event">
+    <crm:P14_carried_out_by rdf:resource="https://w3id.org/arco/resource/Agent/d390f650e656bcddec1ca77387c937c2"/>
+    <crm:P32_used_general_technique>Cromolitografia
+    </crm:P32_used_general_technique>
+  </crm:E12_Production>
+
+  <!-- Autore -->
+  <crm:E21_Person rdf:about="https://w3id.org/arco/resource/Agent/d390f650e656bcddec1ca77387c937c2">
+    <crm:P131_is_identified_by>
+      <crm:E82_Actor_Appellation>
+        <crm:P190_has_symbolic_content>Sencig Pietro Antonio
+        </crm:P190_has_symbolic_content>
+      </crm:E82_Actor_Appellation>
+    </crm:P131_is_identified_by>
+  </crm:E21_Person>
+
+  <!-- Istituzione conservatrice -->
+  <crm:E39_Actor rdf:about="https://w3id.org/arco/resource/CulturalInstituteOrSite/DBunicoCG132053">
+    <crm:E39_Actor rdf:about="https://w3id.org/arco/resource/CulturalInstituteOrSite/DBunicoCG132053">
+    <owl:sameAs rdf:resource="http://lesarchiveserrantes.org/institution/MuseoCollezioneSalce"/>
+</crm:E39_Actor>
+
+    <crm:P131_is_identified_by>
+      <crm:E82_Actor_Appellation>
+        <crm:P190_has_symbolic_content>Museo nazionale Collezione Salce </crm:P190_has_symbolic_content>
+      </crm:E82_Actor_Appellation>
+    </crm:P131_is_identified_by>
+    <crm:P74_has_current_or_former_residence>
+      <crm:E53_Place>
+        <crm:P87_is_identified_by>Via Carlo Alberto, 31, Treviso (TV)</crm:P87_is_identified_by>
+      </crm:E53_Place>
+    </crm:P74_has_current_or_former_residence>
+  </crm:E39_Actor>
+
+</rdf:RDF>

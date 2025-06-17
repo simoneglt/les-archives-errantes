@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+  <!-- Descrizione della persona -->
+  <rdf:Description rdf:about="https://w3id.org/arco/resource/Agent/d390f650e656bcddec1ca77387c937c2">
+    <dc:title>Disegnatore</dc:title>
+    <dc:creator>Disegnatore</dc:creator>
+    <dc:date>1875-1952</dc:date>
+    <dc:language>it</dc:language>
+    <dc:identifier>https://w3id.org/arco/resource/Agent/d390f650e656bcddec1ca77387c937c2</dc:identifier>
+    <dc:subject>Arte</dc:subject>
+    <dc:description>Disegnatore italiano, attivo tra il 1875 e il 1952.</dc:description>
+    <dc:publisher>Passero Chiesa, ditta (Udine)</dc:publisher>
+    <dc:format>Disegnatore, attività artistica</dc:format>
+  </rdf:Description>
+
+</rdf:RDF>

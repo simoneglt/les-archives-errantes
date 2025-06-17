@@ -1,0 +1,43 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <!-- Descrizione dell'oggetto culturale -->
+  <rdf:Description rdf:about="https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500666037">
+    <dcterms:title xml:lang="it">Acrobati e giocolieri intorno a un cerchio</dcterms:title>
+    
+    <!-- Autore con URI -->
+    <dcterms:creator rdf:resource="https://w3id.org/arco/resource/Agent/d390f650e656bcddec1ca77387c937c2"/>
+    
+    <dcterms:subject>Manifesto pubblicitario</dcterms:subject>
+    <dcterms:description xml:lang="it">Affiches prodotte dalla ditta Passero Chiesa di Udine</dcterms:description>
+    
+    <!-- Ente conservatore con URI -->
+    <dcterms:publisher rdf:resource="https://w3id.org/arco/resource/CulturalInstituteOrSite/DBunicoCG132053"/>
+    
+    <dcterms:contributor>Passero Chiesa (ditta, Udine)</dcterms:contributor>
+    <dcterms:type>Image</dcterms:type>
+    <dcterms:medium>Carta</dcterms:medium>
+    <dcterms:format>Cromolitografia</dcterms:format>
+    
+    <!-- Identificativi -->
+    <dcterms:identifier>https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500666037</dcterms:identifier>
+    <dcterms:isReferencedBy>MODI - Codice catalogo nazionale: 0500666037</dcterms:isReferencedBy>
+    <dcterms:source>Numero di inventario: 00270</dcterms:source>
+    
+    <dcterms:spatial>Via Carlo Alberto, 31, Treviso (TV)</dcterms:spatial>
+    <dcterms:rights>CC-BY 4.0</dcterms:rights>
+    <dcterms:language>it</dcterms:language>
+  </rdf:Description>
+
+  <!-- Autore come entità descritta -->
+  <rdf:Description rdf:about="https://w3id.org/arco/resource/Agent/d390f650e656bcddec1ca77387c937c2">
+    <rdfs:label>Sencig Pietro Antonio</rdfs:label>
+  </rdf:Description>
+
+  <!-- Istituto conservatore come entità descritta -->
+  <rdf:Description rdf:about="https://w3id.org/arco/resource/CulturalInstituteOrSite/DBunicoCG132053">
+    <rdfs:label>Museo nazionale Collezione Salce</rdfs:label>
+  </rdf:Description>
+
+</rdf:RDF>
