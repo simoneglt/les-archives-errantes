@@ -1,0 +1,515 @@
+<!-- info qui: https://tei-c.org/release/doc/tei-p5-doc/it/html/examples-stage.html -->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Io e Monnalisa</title>
+        <author>Riccardo Bartoletti</author>
+      </titleStmt>
+      <publicationStmt>
+  
+        <publisher>Casa Editrice Matan</publisher>
+        <pubPlace>Milano</pubPlace>
+        <date when="2024-01-10">10 gennaio 2024</date>
+        <availability status="restricted">
+          <licence>© Tutti i diritti riservati. Nessuna parte di questo testo può essere riprodotta senza autorizzazione.</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title>Io e Monnalisa</title>
+          <author>Riccardo Bartoletti</author>
+          <publisher>Casa Editrice Matan</publisher>
+          <date>2024</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Questo documento TEI utilizza il modulo TEI-Drama per marcare un copione teatrale dal titolo "Io e Monnalisa" di Riccardo Bartoletti. La struttura drammatica è rappresentata tramite gli elementi div type="act" e div type="scene" per atti e scene, sp per le battute, speaker per i personaggi parlanti, stage per le didascalie, e {castList} per la lista dei personaggi</p>
+      </projectDesc>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="castList">
+            <desc>Contiene la lista dei personaggi (e relativi attori) con struttura gerarchica mediante castGroup e castItem.</desc>
+          </tagUsage>
+          <tagUsage gi="role">
+            <desc> Rappresenta i ruoli drammatici, dotati di identificatori univoci (role xml:id="...") per essere richiamati nel corpo del testo.</desc>
+          </tagUsage>
+          <tagUsage gi="roleDesc">
+            <desc>Offre una breve descrizione narrativa del ruolo del personaggio.</desc>
+          </tagUsage>
+          <tagUsage gi="sp">
+            <desc>Contiene un intervento drammatico, identificato mediante l’attributo @who che fa riferimento all’id del ruolo parlante.</desc>
+          </tagUsage>
+          <tagUsage gi="speaker">
+            <desc>Nome del personaggio che pronuncia la battuta, spesso ripetuto più volte in caso di dialoghi condivisi.</desc>
+          </tagUsage>
+          <tagUsage gi="stage">
+            <desc>Indica didascalie sceniche, come ingressi, uscite, azioni o movimenti in scena, con l’attributo @type per specificarne la natura (es. business, entrance).</desc>
+          </tagUsage>
+          <tagUsage gi="performance">
+            <desc>Indica informazioni sulla prima rappresentazione dell’opera.</desc>
+          </tagUsage>
+        </namespace>
+      </tagsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="it">Italiano</language>
+      </langUsage>
+      <textClass>
+        <keywords>
+          <term>teatro</term>
+          <term>prosa</term>
+          <term>moderno</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2025-05-10" who="#simone-gliottone">Marcatura del testo</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text>
+    <front>
+      <castList>
+        <castGroup>
+          <head>Personaggi</head>
+          <castItem>
+            <actor>Dalila Reas</actor>
+            <role xml:id="monnalisa" ref="http://viaf.org/viaf/239154380958730291308">Monnalisa</role>
+            <roleDesc>La Gioconda, Monnalisa, che prende vita e guida Leonardo alla scoperta di sè stesso</roleDesc>
+          </castItem>
+          <castItem>
+            <actor>Ludovico Fededegni</actor>
+            <role xml:id="leonardo" ref="http://viaf.org/viaf/24604287">Leonardo</role>
+            <roleDesc>Leonardo da Vinci alle prese con il dipinto La Gioconda</roleDesc>
+          </castItem>
+          <castItem>
+            <actor>Lorenzo Frediani</actor>
+            <role xml:id="machiavelli" sameAs="http://viaf.org/viaf/95151646">Machiavelli</role>
+            <roleDesc>Contraltare di Leonardo</roleDesc>
+          </castItem>
+          <castItem>
+            <actor>Lorenzo Frediani</actor>
+            <role xml:id="michelangelo" sameAs="http://viaf.org/viaf/24585191">Michelangelo</role>
+            <roleDesc>Amico/rivale di Leonardo</roleDesc>
+          </castItem>
+        </castGroup>
+      </castList>
+
+      <performance>
+        <p>Prima rappresentazione: Cinema Teatro Metropolitan, RomaPiombino, 12 marzo 2024. Regia di Lorenzo Frediani.</p>
+      </performance>
+    </front>
+
+    <body>
+      <div type="act" xml:id="prologo">
+        <prologue>
+         <head>Prologo</head>
+           <sp who="#monnalisa">
+             <speaker>Monnalisa</speaker>
+             <p>Vi è mai capitato di guardarvi allo specchio e non riconoscervi? Immaginate la scena: siete alla fine di una lunga giornata, siete esausti, magari avete appena sbagliato qualcosa che non dovevate sbagliare, che non pensavate mai di potere sbagliare… e invece è successo. Gettate uno sguardo al vostro riflesso e vi dite: “Ma io, chi sono?”. Giusto, non mi sono presentata: sono io, la Monnalisa, ed anche a me capitava, guardando il mio riflesso, di vedermi "sfocata". “E’ troppo strana, sorride troppo, sorride poco, è troppo sfacciata con quello sguardo!”. Tutti mi giudicano, ma non mi fa più male. Questa è la storia di come ho trovato la risposta alla domanda “chi sono io?”, e di come, insieme a me, l’ha trovata Leonardo da Vinci. Lo conoscete tutti, no? Leonardo da Vinci: il pittore, ingegnere, inventore, uomo straordinario dai mille talenti. Ma non voglio parlarvi di quel Leonardo. Voglio parlarvi del Leonardo che solo io ho visto, io che sono stata con lui per tutta questa storia. Questa è la storia dei suoi fallimenti, il primo, il più famoso forse, il Cenacolo di Milano , è accaduto da poco in questa vicenda, e a oggi sarebbe crollato, se non lo avessero restaurato, e restaurato, e restaurato. Ma di questo parleremo pian piano, perché Leonardo non è ancora pronto.</p>
+           </sp>
+        </prologue>
+      </div>
+
+      <!-- scena 1 -->
+
+      <div type="act" xml:id="atto1">
+        <head>Scena 1</head>
+
+        <div type="scene" xml:id="scena1">
+          <head>Scena I</head>
+
+          <stage type="business">(Leonardo prepara la pittura per dipingere ML.)</stage>
+
+          <sp who="#monnalisa">
+            <speaker>Monnalisa</speaker>
+            <p>E’ il 1504. Pisa e Firenze, si stanno facendo una guerra senza pietà, e siamo tutti coinvolti: cittadini, artigiani, contadini… e artisti. C’è sempre una statua da costruire o un dipinto da realizzare per celebrare le 
+            gesta del potente di turno… E così, qualche mese fa è piombato in bottega il Gran Segretario della Seconda Cancelleria della Repubblica di Firenze Niccolò Machiavelli, che ha chiesto che la Sala del Consiglio venga affrescata con un’opera immensa, alta sette metri e lunga quindici con la celebre Battaglia di Anghiari, in cui Firenze trionfò sul Ducato di Milano. Leonardo non ha ancora cominciato.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Cecco, l’olio per la mia Lisa sta terminando!</p>
+          </sp>
+
+           <sp who="#monnalisa">
+            <speaker>Monnalisa</speaker>
+            <p>Non siamo da soli in bottega: c’è Cecco, il suo allievo migliore</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Salaì, metti della musica!</p>
+          </sp>
+
+          <stage type="business">(Leonardo fa una richiesta musicale)</stage>
+
+          <sp who="#monnalisa">
+            <speaker>Monnalisa</speaker>
+            <p>C’è Salaì, che in bottega fa quello che vuole perché Leonardo ha un debole per lui.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Tommaso, le uova nel mio studio sono per legare la tempera, non per farci merenda!</p>
+          </sp>
+
+          <sp who="#monnalisa">
+            <speaker>Monnalisa</speaker>
+            <p>E c’è il piccolo Tommaso, a cui Leonardo vuole bene come se fosse suo figlio. Siamo tutti figli qui, siamo ben vestiti, si mangia di gusto e quando si lavora c’è sempre bella musica ad accompagnarci.</p>
+          </sp>
+
+          <stage type="business">(Leonardo si appresta a dipingere Monnalisa con estrema cura.)</stage>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Ovvìa, cosa avrai sempre da chiacchierare, tu? Quando lavoriamo ci vuole concentrazione, rigore e precisione, e quindi bocche chiuse.</p>
+          </sp>
+
+          <sp who="#monnalisa">
+            <speaker>Monnalisa</speaker>
+            <p>Fa così perché stamattina è venuta a posare in bottega Lisa del Giocondo e ogni volta che lei viene a trovarci, Leonardo si comporta in modo strano.</p>
+          </sp>
+
+          <stage type="business">(Leonardo danza per ispirarsi.)</stage>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>È il sorriso, ecco cosa non va! Togliti quel sorriso dalla bocca perchè Lisa non sorride!</p>
+          </sp>
+
+          <sp who="#monnalisa">
+            <speaker>Monnalisa</speaker>
+            <p>Perchè vuoi toglierlo? A me pare mi stia bene.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Non è che non ti stia bene… è che però…</p>
+          </sp>
+
+          <sp who="#monnalisa">
+            <speaker>Monnalisa</speaker>
+            <p>Si, ma colpisce… è bello…</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Non deve piacere a te, né a me! È una commissione: Francesco del Giocondo ha chiesto un ritratto fedele della moglie e questo io farò.</p>
+          </sp>
+
+          <sp who="#monnalisa">
+            <speaker>Monnalisa</speaker>
+            <p>Quindi è solo la commissione che ti interessa?</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Ssh, certo.</p>
+          </sp>
+
+          <stage type="entrance">(Entra Machiavelli.)</stage>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Anche la Battaglia è una commissione. <pause type="dramatic" dur="short"/> Leonardo! Mio grande amico! Disturbo?</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Prego, stavo solo… ragionando ad alta voce.</p>
+          </sp>
+
+          <stage type="business">(Machiavelli nota il dipinto di Monnalisa.)</stage>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Ah, e questa chi è?... La moglie di Francesco del Giocondo.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Precisamente.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>E senti che musica! Provo sempre un sottile piacere nel venirvi a trovare, sapete? In questo studio c’è sempre grande vitalità, grande movimento…quello che non c’è è la mia Battaglia di Anghiari.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Mi sono dilungato a lavorare sull’impalcatura per dipingerla.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Ma è quel prodigio architettonico in Santa Maria Novella, con tutte quelle inutili carrucole?</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Certo, e grazie a quella sarò molto più veloce.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Meraviglioso, certo, ma Leonardo caro, è pronto da mesi, è lì ogni giorno ad aspettare voi, proprio come faccio io. È la Battaglia che manca.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Non ho iniziato a dipingere ma ho già tutto in testa. L’opera avrà il prestigio che merita. Grazie ad una tecnica che la renderà perfetta, l'"encausto".</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>“En”...che?</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Encausto: impresso a fuoco.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Fuoco? Sembra stravagante.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Non è affatto stravagante, e risale infatti agli antichi romani: ne parlano i maestri Plinio e Vitruvio.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Plinio e Vitruvio?</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Fidatevi di me, ho studiato la tecnica: si tratta di mescolare i pigmenti alla cera d’api bollita in acqua di mare, calce e poi usare dei braceri per fissare sul muro l’olio di lino…</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Olio? Non c’è nessun bisogno d’olio. Non farà mica la fine del vostro Cenacolo? Ma perché non fate un affresco a tempera come fanno tutti? Come insegna il maestro Giotto.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Con tutto il rispetto, Giotto non aveva le competenze.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Giotto non aveva le competenze?!</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Niccolò, con l’olio è meglio.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>… va bene, fate come volete, basta che non cada a pezzi come il Cenacolo!</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Basta con questa storia! È tutto pronto, vi dico!</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Ma se è tutto pronto perché non cominciate?</p>
+          </sp>
+
+          <stage type="business">(Leonardo non risponde.)</stage>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>La moglie di Francesco del Giocondo viene prima della Repubblica?</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Domani stesso terminerò Monna Lisa e mi metterò al lavoro sulla Battaglia. Amico mio, fidatevi di me. L’opera vi farà felice.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Lo spero bene. Vi serve qualcos’altro oltre a quello che avete già avuto?</p>
+          </sp>
+
+          <sp who="#leonardo #monnalisa">
+            <speaker>Leonardo</speaker>
+            <speaker>Monnalisa</speaker>
+            <p>Uova, salviette, candelabri, un ramaiolo da minestra, poi del pigmento blu brillante se possibile, e un materasso di piuma...</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Un materasso di piuma? Non voglio sapere cosa ne avete fatto del primo anticipo che vi ho dato, ci avete vestito il vostro fidanzato probabilmente.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Siete venuto per farmi la spesa o c’è qualcos’altro?</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>A dir la verità ero venuto per parlarvi di un nuovo progetto molto importante, ma voi dovete ancora “encaustare”.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Fermi tutti. Che progetto?</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>È un’opera di ingegneria militare, non posso rischiare.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Che progetto?</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Chiederò alla bottega di Francesco Martini. Si sono occupati del Castello Aragonese di Taranto e l’opera era degna.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Niccolò Machiavelli!</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Voglio deviare il corso dell’Arno.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Meraviglia.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Togliere l’acqua a Pisa e così vincere la guerra che da anni sta dissanguando le nostre casse e i nostri uomini. Ma tutti sostengono che sia impossibile!</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Certo che è impossibile, accetto. È per questo che avete bisogno di me. E vi dico di più, amico mio: provate a immaginare, non solo Pisa in ginocchio, ma voi potreste imbarcarvi a ponte Santa Trinita, farvi cullare fino a Empoli, “sciacquettare” fino a Pontedera, e a quel punto tirare dritti su Livorno, nuovo porto della Repubblica Marinara di Firenze, al centro del quale svetterà la statua dell’eroe della guerra, Niccolò Machiavelli.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>E la mia Battaglia?</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Ci penseremo.</p>
+          </sp>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Ma niente stravaganze.</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p> Sarà un successo.</p>
+          </sp>
+
+          <stage type="business">(Leonardo e Machiavelli si stringono la mano.)</stage>
+
+          <stage type="business">(Machiavelli osserva Monnalisa.)</stage>
+
+          <sp who="#machiavelli">
+            <speaker>Machiavelli</speaker>
+            <p>Non è male, comunque, non è male, sembra... Ma non metterla davanti alla mia diga.</p>
+          </sp>
+
+          <stage type="exit">(Esce Machiavelli.)</stage>
+
+          <sp who="#monnalisa">
+            <speaker>Monnalisa</speaker>
+            <p>Come faremo a portare via l’acqua da Pisa e..?</p>
+          </sp>
+
+          <sp who="#leonardo">
+            <speaker>Leonardo</speaker>
+            <p>Shhhh. Non dire niente, per favore, non dire niente.</p>
+          </sp>
+
+          <div type="intermezzo" xml:id="intermezzo1">
+
+            <sp who="#monnalisa">
+              <speaker>Monnalisa</speaker>
+              <p>E Leonardo si mise a lavorare alla diga di Machiavelli. Ma io non vorrei che anche voi vi foste fatti distrarre da questo nuovo progetto,per cui torniamo un attimo indietro perché c’é un particolare molto importante da rivedere.</p>
+            </sp>
+
+            <sp who="#leonardo">
+              <speaker>Leonardo</speaker>
+              <p>..una tecnica che risale agli antichi romani: ne parlano i maestri Plinio e Vitruvio.</p>
+            </sp>
+
+            <sp who="#machiavelli">
+              <speaker>Machiavelli</speaker>
+              <p>Plinio e Vitruvio?</p>
+            </sp>
+
+            <sp who="#leonardo">
+              <speaker>Leonardo</speaker>
+              <p>Si tratta di mescolare i pigmenti alla cera d’api bollita in acqua di mare, calce e poi usare dei braceri per fissare sul muro l’olio di lino…</p>
+            </sp>
+
+            <sp who="#machiavelli">
+              <speaker>Machiavelli</speaker>
+              <p>Olio? Non c’è nessun bisogno d’olio. Non farà mica la fine del Cenacolo? Ma perché non fate un affresco a tempera come fanno tutti? Come insegna il maestro Giotto.</p>
+            </sp>
+
+            <sp who="#monnalisa">
+              <speaker>Monnalisa</speaker>
+              <p>Ma leggiamola allora la ricetta di Plinio nel suo Historiae Naturalis,fate ben attenzione agli ingredienti:<q>“Mescolare i pigmenti di colore con cera vergine fatta bollire in acqua di mare e calce, per ottenere una tempera densa, da diluire eventualmente con acqua. Poi, dipingere. Una volta asciutto, spalmare con cera punica sciolta. Scaldare quindi con un piccol o braciere, per fissare la tempera fino al supporto”.</q></p>
+            </sp>
+
+            <sp who="#monnalisa">
+              <speaker>Monnalisa</speaker>
+              <p>Rivediamo la scena.</p>
+            </sp>
+
+            <sp who="#leonardo">
+              <speaker>Leonardo</speaker>
+              <p>Si tratta di mescolare i pigmenti alla cera d’api bollita in acqua di mare, calce e poi usare dei braceri per fissare sul muro l’olio di lino…</p>
+            </sp>
+
+            <sp who="#machiavelli">
+              <speaker>Machiavelli</speaker>
+              <p>Olio? Non c’è nessun bisogno d’olio. Ma… avete sentito anche voi? Sbaglio o Leonardo ha un po’, come dire, remixato la ricetta di Plinio… voi che dite? Ok, tenetelo a mente. Adesso torniamo ai lavori sull'Arno.</p>
+            </sp>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- scena 2 -->
+
+    </body>
+  </text>
+</TEI>

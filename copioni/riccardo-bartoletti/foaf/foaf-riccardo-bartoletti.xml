@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+  <foaf:Person rdf:about="https://riccardo-bartoletti.org">
+    <foaf:name>Riccardo Bartoletti</foaf:name>
+    <foaf:nick>Richi</foaf:nick>
+    <foaf:mbox rdf:resource="mailto:riccardo-bartoletti@gmail.com"/>
+    <foaf:homepage rdf:resource="https://riccardo-bartoletti.org"/>
+    <foaf:img rdf:resource="https://simone.example.com/foto.jpg"/>
+    <foaf:phone>+39 370 1234567</foaf:phone>
+    <foaf:based_near rdf:resource="http://sws.geonames.org/3173435/"/>
+    <foaf:description>Riccardo è un drammaturgo italiano attualmente impegnato nella produzione di testi teatrali per Matan Teatro</foaf:description>
+    <foaf:made rdf:resource="http://lesarchiveserrantes.org/copione/io-e-monnalisa/"/>
+  </foaf:Person>
+
+</rdf:RDF>

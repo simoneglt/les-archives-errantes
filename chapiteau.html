@@ -1,0 +1,280 @@
+<!DOCTYPE html> 
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les  Archives  Errantes</title>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<!-- inizio body -->
+<body>
+<!-- header -->
+<div class="header">
+  <h2 id="header-title">Les Archives  Errantes</h2>
+</div>
+<!-- navbar -->
+<div class="topnavbar">
+  <!-- hamburger menu responsive per piccoli schermi-->
+  <div class="hamburger-menu" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- fine hamburger menu responsive per piccoli schermi-->
+
+  <a href="index.html" target="_self">Home</a>
+  <a href="progetto.html" target="_self">Il progetto</a>
+
+  <div class="dropdown-compagnie">
+    <a href="#" onclick="toggleMenu(this)" class="compagnie"><span class="arrow">▸</span> Compagnie</a>
+      <div class="dropdown-compagnie-content">
+        <a target="_blank" href="https://www.instagram.com/circopaniko/?hl=en">Circo Paniko</a>
+        <a target="_blank" href="https://www.circozoe.com/#firstPage">Circo Zoé</a>
+        <a target="_blank" href="https://www.nandoemaila.it/it/">Compagnia Nando e Maila</a>
+        <a target="_blank" href="https://magdaclan.com/">Magdaclan</a>
+      </div>
+  </div>
+
+    <div class="dropdown-collezioni">
+      <a href="#" onclick="toggleMenu(this)" class="collezioni"><span class="arrow">▸</span> Collezioni</a>
+        <div class="dropdown-collezioni-content">
+          <a id="catalogo" target="_self" href="catalogo.html">Catalogo</a>
+          <a target="_self" href="acrobazie.html">Acrobazie</a>
+          <a target="_self" href="#">Attrezzature</a>
+          <a target="_self" href="#">Mezzi di Trasporto</a>
+          <a target="_self" href="chapiteau.html">Chapiteau</a>
+          <a target="_self" href="#">Strumenti Musicali</a>
+          <a target="_self" href="#">Persone</a>
+          <a target="_self" href="manifesti.html">Manifesti</a>
+        </div>
+    </div>
+
+    <div class="dropdown-osservatorio-accademico"> 
+      <a href="#" onclick="toggleMenu(this)" class="osservatorio-accademico"><span class="arrow">▸</span> Osservatorio Accademico</a>
+      <div class="dropdown-osservatorio-accademico-content">
+        <a target="_self" href="#">Interviste</a>
+        <a target="_self" href="#">Podcast</a>
+        <a target="_self" href="#">Documentari</a>
+        <a target="_self" href="#">Pubblicazioni Open Access</a>
+        <a target="_self" href="#">Tesi di Laurea</a>
+        <a target="_self" href="#">Circo Sociale</a>
+        <a target="_self" href="#">La Musica al Circo</a>
+      </div>
+    </div>
+
+    <form>
+      <input type="search" name="q" placeholder="Cerca nel sito">
+      <input type="submit" value="Cerca">
+    </form>
+
+
+</div>
+<!-- titolo catalogo + breadcrumbs -->
+<div class="catalogo-wrapper">
+  <div class="header-catalogo">
+    <div class="breadcrumbs">
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Collezioni</a></li>
+      <li><a href="catalogo.html">Catalogo</a></li>
+      <li><a href="chapiteau.html">Chapiteau</a></li>
+      </ul>
+    </div>
+    <div class="titolo-catalogo">
+      <h2 id="testo-titolo-catalogo">Chapiteau</h2>
+    </div>
+    <div class="breadcrumbs-right"></div>
+  </div>
+  <!-- navbar laterale per catalogo -->
+  <div class="catalogo-layout">
+    <!-- sidenavbar -->
+    <div class="sidenavbar">
+ 
+      <div class=" dropdown-container-wrapper">
+        <button id="button-tipo-di-media" class="dropdown-btn"><span class="arrow">▸</span> Tipo di media<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container-catalogo">
+          <a href="#">Fotografia</a>
+          <a href="#">Video</a>
+          <a href="#">Audio</a>
+          <a href="#">Testo</a>
+        </div>
+      </div>
+
+      <div class=" dropdown-container-wrapper">
+        <button id="button-regione" class="dropdown-btn"><span class="arrow">▸</span> Regione<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container-catalogo">
+          <a id="link-mappa" href="#">Mappa</a>
+          <a href="#">Abruzzo</a>
+          <a href="#">Basilicata</a>
+          <a href="#">Calabria</a>
+          <a href="#">Campania</a>
+          <a href="#">Emilia-Romagna</a>
+          <a href="#">Friuli-Venezia Giulia</a>
+          <a href="#">Lazio</a>
+          <a href="#">Liguria</a>
+          <a href="#">Lombardia</a>
+          <a href="#">Marche</a>
+          <a href="#">Molise</a>
+          <a href="#">Piemonte</a>
+          <a href="#">Puglia</a>
+          <a href="#">Sardegna</a>
+          <a href="#">Sicilia</a>
+          <a href="#">Toscana</a>
+          <a href="#">Trentino-Alto Adige</a>
+          <a href="#">Umbria</a>
+        </div>
+      </div>
+
+      <div class=" dropdown-container-wrapper">
+        <button id="button-compagnia" class="dropdown-btn"><span class="arrow">▸</span> Compagnia<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container-catalogo">
+          <a href="#">Circo Paniko</a>
+          <a href="#">Circo Zoé</a>
+          <a href="#">Circo Vertigo</a>
+          <a href="#">Comapagnia Nando e Maila</a>
+          <a href="#">Magdaclan</a>
+        </div>
+      </div>
+
+      <div class=" dropdown-container-wrapper"><button id="button-persone" class="dropdown-btn"><span class="arrow">▸</span> Persone<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container-catalogo">
+          <a href="#">Tizio Tazio</a>
+          <a href="#">Massimo Massimi</a>
+          <a target="_blank" href="felice-mai.html"> Felice Mai</a>
+          <a href="#">Kikko</a>
+          <a target="_blank" href="vladi.html">Vladi</a>
+        </div>
+      </div>
+        
+      <div class=" dropdown-container-wrapper"><button id="button-date" class="dropdown-btn"><span class="arrow">▸</span> Date<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container-catalogo">
+          <a id="link-linea-del-tempo" href="#">Linea del Tempo</a>
+          <a href="#">... -1900</a>
+          <a href="#">1900-1910</a>
+          <a href="#">1911-1920</a>
+          <a href="#">1921-1930</a>
+          <a href="#">1931-1940</a>
+          <a href="#">1941-1950</a>
+          <a href="#">1951-1960</a>
+          <a href="#">1961-1970</a>
+          <a href="#">1971-1980</a>
+          <a href="#">1981-1990</a>
+          <a href="#">1991-2000</a>
+          <a href="#">2001-2010</a>
+          <a target="_self" href="date-2011-2020.html">2011-2020</a>
+          <a href="#">2021-2030</a>
+        </div>
+      </div>
+
+      <div class=" dropdown-container-wrapper"><button id="button-acrobazie" class="dropdown-btn"><span class="arrow">▸</span> Acrobazie<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container-catalogo">
+          <a href="#">Mano a Mano</a>
+          <a target="_blank" href="acrobazie-aeree.html">Aeree</a>
+          <a target="_blank" href="acrobazie-equilibrismo.html">Equilibrismo</a>
+          <a href="#">Contorsionismo</a>
+          <a href="#">Danza</a>
+        </div>
+      </div>
+
+      <div class=" dropdown-container-wrapper"><button id="button-chapiteau" class="dropdown-btn"><span class="arrow">▸</span> Chapiteau<i class="fa fa-caret-down"></i>
+      </button>
+      </div>
+
+      <div class=" dropdown-container-wrapper"><button id="button-manifesti" class="dropdown-btn"><span class="arrow">▸</span> Manifesti<i class="fa fa-caret-down"></i>
+      </button>
+      </div>
+
+      <div class=" dropdown-container-wrapper"><button id="button-strumenti-musicali" class="dropdown-btn"><span class="arrow">▸</span> Strumenti Musicali<i class="fa fa-caret-down"></i>
+      </button>
+        <div class="dropdown-container-catalogo">
+          <a href="#">Chitarra</a>
+          <a href="#">Basso</a>
+          <a href="#">Batteria</a>
+          <a href="#">Fisarmonica</a>
+          <a href="#">Contrabbasso</a>
+          <a href="#">Violino</a>
+          <a href="#">Arpa</a>
+          <a href="#">Strumenti Inventati</a>
+        </div>
+      </div>
+
+      <div class=" dropdown-container-wrapper"><button id="button-attrezzature" class="dropdown-btn"><span class="arrow">▸</span> Attrezzature<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container-catalogo">
+          <a href="#">Trapezio</a>
+          <a href="#">Palo Cinese</a>
+          <a href="#">Roue Cyr</a>
+          <a href="#">Filo Teso</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- portfolio filtrabile -->
+    <div class="portfolio-container">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Tutti</button>
+        <button class="filter-btn" data-filter="fotografia">Fotografia</button>
+        <button class="filter-btn" data-filter="video">Video</button>
+        <button class="filter-btn" data-filter="audio">Audio</button>
+        <button class="filter-btn" data-filter="testo">Testo</button>
+        <button class="filter-btn" data-filter="storymap">StoryMap</button>
+        <button class="filter-btn" data-filter="text-analysis">Text Analysis</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="fotografia">
+          <a target="_blank" href="img/chapiteau/chapiteau3.jpeg"><img src="img/chapiteau/chapiteau3.jpeg" alt="chapiteau"></a>
+          <h5 class="nomi-items-cards-catalogo">Chapiteau - campo lungo</h5>
+          <br>
+          <p class="info-items-card-catalogo"><span class="info-cards">Tipo di oggetto:</span> fotografia</p>
+          <p class="info-items-card-catalogo"><span class="info-cards">Supporto:</span> Gelatina bromuro d'argento/pellicola (poliestere)</p>
+          <p class="info-items-card-catalogo"><span class="info-cards">Fornitore di contenuti:</span><a target="_blank" href="https://it.wikipedia.org/wiki/Istituto_Luce_Cinecittà"> Cinecittà - Luce</a></p>
+          <p class="info-items-card-catalogo"><span class="info-cards">Data Creazione:</span> 09 - 1959
+          </p>
+        </div>
+        <div class="portfolio-item" data-category="fotografia">
+          <a target="_blank" href="img/chapiteau/chapiteau4.jpeg"><img src="img/chapiteau/chapiteau4.jpeg" alt="chapiteau-moscow-state-circus"></a>
+          <h5 class="nomi-items-cards-catalogo">Chapiteau del Circo di Mosca</h5>
+          <br>
+          <p class="info-items-card-catalogo"><span class="info-cards">Tipo di oggetto:</span> fotografia</p>
+          <p class="info-items-card-catalogo"><span class="info-cards">Supporto:</span> digitale</p>
+          <p class="info-items-card-catalogo"><span class="info-cards">Fornitore di contenuti:</span><a target="_blank" href="https://cdm15847.contentdm.oclc.org/digital/collection/p15847coll3/search"> National Fairground and Circus Archive Collection</a></p>
+          <p class="info-items-card-catalogo"><span class="info-cards">Data Creazione:</span> 09 - 2 - 2016
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- pagination centrale in basse per catalogo  -->
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#" class="aperta">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+  </div>
+
+</div>
+<!-- footer -->
+<div class="footer">
+  <div class="links-footer">
+    <a class="crediti" target="_self" href="#">Crediti</a> | <a class="licenze" target="_self" href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">Licenze</a> | <a class="contatti" target="_self" href="#">Contatti</a>
+  </div>
+  <div class="copyright">
+     <p> © Copyright (c) 2025 by Simone Gliottone </p>
+  </div>
+
+</div>
+
+</body>
+</html>

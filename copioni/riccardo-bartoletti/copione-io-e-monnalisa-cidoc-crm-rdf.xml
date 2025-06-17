@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+         xmlns:ex="http://lesarchiveserrantes.org/">
+
+  <!-- Opera teatrale -->
+  <crm:E73_Information_Object rdf:about="opera/io-e-monnalisa">
+    <rdfs:label>Io e Monnalisa</rdfs:label>
+    <crm:P102_has_title>Io e Monnalisa</crm:P102_has_title>
+    <crm:P94i_was_created_by rdf:resource="attività/creazione-opera"/>
+  </crm:E73_Information_Object>
+
+  <!-- Autore -->
+  <crm:E21_Person rdf:about="persona/riccardo-bartoletti">
+    <rdfs:label>Riccardo Bartoletti</rdfs:label>
+    <crm:P14_carried_out_by rdf:resource="attività/creazione-opera"/>
+  </crm:E21_Person>
+
+  <!-- Attività di creazione -->
+  <crm:E65_Creation rdf:about="attività/creazione-opera">
+    <crm:P14_carried_out_by rdf:resource="persona/riccardo-bartoletti"/>
+    <crm:P94_has_created rdf:resource="opera/io-e-monnalisa"/>
+    <crm:P4_has_time-span>
+      <crm:E52_Time-Span>
+        <crm:P82a_begin_of_the_begin>2024-01-10</crm:P82a_begin_of_the_begin>
+      </crm:E52_Time-Span>
+    </crm:P4_has_time-span>
+  </crm:E65_Creation>
+
+  <!-- Performance -->
+  <crm:E7_Activity rdf:about="evento/prima-rappresentazione">
+    <rdfs:label>Prima rappresentazione</rdfs:label>
+    <crm:P7_took_place_at rdf:resource="luogo/metropolitan-piombino"/>
+    <crm:P4_has_time-span>
+      <crm:E52_Time-Span>
+        <crm:P82a_begin_of_the_begin>2024-03-12</crm:P82a_begin_of_the_begin>
+      </crm:E52_Time-Span>
+    </crm:P4_has_time-span>
+    <crm:P14_carried_out_by rdf:resource="http://example.org/persona/lorenzo-frediani"/>
+  </crm:E7_Activity>
+
+  <!-- Luogo della rappresentazione -->
+  <crm:E53_Place rdf:about="https://en.wikipedia.org/wiki/Piombino">
+    <rdfs:label>Cinema Teatro Metropolitan, Piombino</rdfs:label>
+  </crm:E53_Place>
+
+  <!-- Regista -->
+  <crm:E21_Person rdf:about="persona/lorenzo-frediani">
+    <rdfs:label>Lorenzo Frediani</rdfs:label>
+  </crm:E21_Person>
+
+  <!-- Personaggi e Attori -->
+  <!-- Monnalisa -->
+  <crm:E39_Actor rdf:about="personaggio/monnalisa">
+    <rdfs:label>Monnalisa</rdfs:label>
+    <crm:P107i_is_current_or_former_member_of rdf:resource="interpretazione/dalila-monnalisa"/>
+  </crm:E39_Actor>
+
+  <crm:E21_Person rdf:about="persona/dalila-reas">
+    <rdfs:label>Dalila Reas</rdfs:label>
+    <crm:P107_is_current_or_former_member_of rdf:resource="interpretazione/dalila-monnalisa"/>
+  </crm:E21_Person>
+
+  <crm:E74_Group rdf:about="interpretazione/dalila-monnalisa">
+    <rdfs:label>Dalila Reas interpreta Monnalisa</rdfs:label>
+    <crm:P2_has_type rdf:resource="tipo/interpretazione-ruolo"/>
+  </crm:E74_Group>
+
+  <!-- Leonardo -->
+  <crm:E39_Actor rdf:about="http://viaf.org/viaf/24604287">
+    <rdfs:label>Leonardo</rdfs:label>
+  </crm:E39_Actor>
+
+  <crm:E21_Person rdf:about="persona/ludovico-fededegni">
+    <rdfs:label>Ludovico Fededegni</rdfs:label>
+  </crm:E21_Person>
+
+  <!-- Machiavelli -->
+  <crm:E39_Actor rdf:about="http://viaf.org/viaf/95151646">
+    <rdfs:label>Machiavelli</rdfs:label>
+  </crm:E39_Actor>
+
+  <crm:E21_Person rdf:about="persona/lorenzo-frediani">
+    <rdfs:label>Lorenzo Frediani (interprete)</rdfs:label>
+  </crm:E21_Person>
+
+</rdf:RDF>

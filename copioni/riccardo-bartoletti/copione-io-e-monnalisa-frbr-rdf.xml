@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:frbr="http://iflastandards.info/ns/fr/frbr/frbrer/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:ex="http://lesarchiveserrantes.org/">
+
+  <!-- Work: l'idea astratta dell'opera teatrale -->
+  <frbr:Work rdf:about="work/io-e-monnalisa">
+    <rdfs:label>Io e Monnalisa</rdfs:label>
+    <dc:title>Io e Monnalisa</dc:title>
+    <frbr:creator rdf:resource="person/riccardo-bartoletti"/>
+    <frbr:realization rdf:resource="expression/io-e-monnalisa-espressione"/>
+  </frbr:Work>
+
+  <!-- Expression: il testo drammaturgico come realizzazione intellettuale -->
+  <frbr:Expression rdf:about="expression/io-e-monnalisa-espressione">
+    <rdfs:label>Testo teatrale di "Io e Monnalisa"</rdfs:label>
+    <frbr:realizationOf rdf:resource="work/io-e-monnalisa"/>
+    <frbr:embodiment rdf:resource="manifestation/io-e-monnalisa-manifestazione"/>
+  </frbr:Expression>
+
+  <!-- Manifestation: il testo drammaturgico come concretizzazione grazie a supporti digitali o fisici -->
+  <frbr:Manifestation rdf:about="manifestation/io-e-monnalisa-manifestazione">
+    <rdfs:label>Versione PDF di "Io e Monnalisa"</rdfs:label>
+    <dc:format>application/pdf</dc:format>
+    <frbr:embodimentOf rdf:resource="expression/io-e-monnalisa-espressione"/>
+    <frbr:exemplar rdf:resource="item/io-e-monnalisa-item"/>
+  </frbr:Manifestation>
+
+  <!-- Item: copia digitale concreta -->
+  <frbr:Item rdf:about="io-e-monnalisa-item">
+    <rdfs:label>Copia digitale PDF - Io e Monnalisa</rdfs:label>
+    <frbr:itemOf rdf:resource="manifestation/io-e-monnalisa-manifestazione"/>
+  </frbr:Item>
+
+  <!-- Autore -->
+  <frbr:Person rdf:about="person/riccardo-bartoletti">
+    <rdfs:label>Riccardo Bartoletti</rdfs:label>
+  </frbr:Person>
+
+</rdf:RDF>
