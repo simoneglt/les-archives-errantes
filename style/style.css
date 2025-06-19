@@ -459,7 +459,7 @@ gap: 5px;
 
 
 @media (max-width: 768px) {
-  .breadcrumbs ul, .breadcrumbs-right {
+  .breadcrumbs, .breadcrumbs-right {
     display: none !important;
   }
 }
