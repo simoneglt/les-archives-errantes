@@ -8,7 +8,8 @@
 /* -- body --*/
 
 html, body {
-  height: 100vh;
+  min-height: 100vh;
+  min-width: auto;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -459,9 +460,19 @@ gap: 5px;
 
 
 @media (max-width: 768px) {
-  .breadcrumbs, .breadcrumbs-right {
+  .breadcrumbs, .breadcrumbs-right, .sidenavbar {
     display: none !important;
   }
+}
+
+@media (max-width: 768px) {
+  .testo-titolo-catalogo, .titolo-catalogo {
+   width: 100%;
+  }
+}
+
+#titolo-testo-catalogo {
+  text-align: center;
 }
 
 .breadcrumbs ul {
@@ -814,7 +825,7 @@ gap: 5px;
 /* style per pagine ITEM */
 
 .titolo-catalogo {
-  width: 370px;
+  min-width: 370px;
   min-height: 90px;
   background-color: #f7f7f7;
   border-left: 5px solid #d12e2e;
