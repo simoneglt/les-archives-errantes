@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const imgElement = document.getElementById("chapiteau2");
 
   function changeImage() {
-    currentIndex = (currentIndex + 1) % images.length; // cicla tra le immagini
+    currentIndex = (currentIndex + 1) % images.length; // ciclo di immagini
     imgElement.src = images[currentIndex];
     imgElement.alt = alts[currentIndex];
   }
