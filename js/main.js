@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "img/index/magdaclan.jpeg"
   ];
 
-// Se vuoi cambiare anche l'alt, mettilo qui in array corrispondente //
+// per cambiare  l'alt, si mette qui in array corrispondente //
   const alts = [
     "chapiteau/circus tent/tenda da circo",
     "foto dello spettacolo Winter",
@@ -109,13 +109,12 @@ document.querySelectorAll('.dropdown-btn').forEach(button => {
       btn.querySelector('.arrow').classList.remove('rotated');
     });
 
-    // Se non era aperto, aprilo
+    // Se non era aperto, lo apre
     if (!isOpen) {
       currentDropdown.style.display = 'block';
       button.classList.add('active');
       arrow.classList.add('rotated');
     }
-    // Altrimenti: si è cliccato sul già aperto, quindi non lo riapriamo
   });
 });
 
